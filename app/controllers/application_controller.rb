@@ -23,6 +23,8 @@ class ApplicationController < Sinatra::Base
     @user.password = params[:password]
     if @user.username == "" && @user.password == nil
       redirect '/failure'
+    else
+      redirect '/login'
     end
   end
 
